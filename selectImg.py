@@ -4,10 +4,9 @@ import os
 from shutil import copyfile
 import pdb
 
-rootpath = '/localsata/xiang/YouTubeFaces/'
+rootpath = '.../YouTubeFaces/' # the path where you save YFW dataset
 readname = 'detected_faces/'
 savename = 'selected_faces/'
-
 
 f = open('index.txt','r+')
 count = 0
