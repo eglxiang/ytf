@@ -1,3 +1,5 @@
+% Xiang Xiang (eglxiang@gmail.com), May 3, 2016, MIT license.
+
 import cv2
 import numpy as np
 
