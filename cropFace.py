@@ -1,3 +1,5 @@
+% Xiang Xiang (eglxiang@gmail.com), May 3, 2016, MIT license.
+
 import os
 import cv2
 import glob
@@ -5,7 +7,7 @@ import pdb
 
 from process import crop
 
-rootpath = '/localsata/xiang/YouTubeFaces/'
+rootpath = '.../YouTubeFaces/' % the path where you save YFW dataset
 readname = 'aligned_images_DB/'
 savename = 'detected_faces/'
 lst_name = os.listdir(rootpath + readname)
