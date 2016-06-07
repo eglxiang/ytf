@@ -1,4 +1,8 @@
-Experiments on Youtube Face in the Wild (YFW). Please download the full dataset from http://www.cs.tau.ac.il/~wolf/ytfaces/ and cite the original paper at CVPR'11 if you publish the experiments on that dataset.
+Experiments on Youtube Face in the Wild (YFW). 
+
+The idea of Linear Discriminant Analysis (LDA) is minimizing intra-class variance and maximizing inter-class variance, which is general. The adaptation of this idea to similarity learning is interesting, such as Discriminative Component Analysis (DCA), Local Fisher Discriminant Analysis (LFDA) and Logistic Discriminant-based Metric Learning (LDML). In ICCV 2009, Matthieu Guillaumin, Jakob Verbeek and Cordelia Schmid proposed this LDML approach in the paper titled "Is that you? Metric Learning Approaches for Face Identification" which has been cited by hundreds of papers. IDML was tested on the Labeled Face in the Wild (LFW) dataset at that time. Two year later, another dataset YFW (Youtube Face in the Wild) was built. Video-based face recognition benchmark makes the subsequent proposals even closer to a real-world face recognition solution. There should be a fair amount of interests to see the performance of LDML on YFW. As time goes by, Local Binary Feature (LBP) has been mostly replaced by deep learning features in the current experiments on either LFW or YFW. Following the same replacement of feature representation, this repository provides a tutorial to verify the metric learning approach of LDML on YFW.
+
+Please download the full dataset from http://www.cs.tau.ac.il/~wolf/ytfaces/ and cite the original paper at CVPR'11 if you publish the experiments on that dataset.
 
 Xiang Xiang (eglxiang@gmail.com), May 2016, MIT license.
 
@@ -34,3 +38,8 @@ Grab codes from another repository of me - https://github.com/eglxiang/vgg_face.
 2. Bash processing for YFW.
 (1) Read selected images for each sequence over all people in the YFW dataset. 
 (2) Use comuFea.sh to process a single sequence. You need to explicitly call the binary (either release or debug mode) such as ./bin/Release/classify_test VGG_FACE_deploy.prototxt VGG_FACE.caffemodel $arg3 where arg3 is the argument defined in the bash.
+
+=========================
+Pairwise metric learning. 
+
+1. Please download the program of Logistic Discriminant-based Metric Learning (LDML) from 
