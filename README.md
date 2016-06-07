@@ -42,4 +42,6 @@ Grab codes from another repository of me - https://github.com/eglxiang/vgg_face.
 =========================
 Pairwise metric learning. 
 
-1. Please download the program of Logistic Discriminant-based Metric Learning (LDML) from 
+1. Split training and testing set.
+2. Multiple Instance Logistic Discriminant-based Metric Learning (MildML) is an extension of LDML for handling bag-level supervision, using the Multiple Instance Learning framework. Please download the program of MildML from http://lear.inrialpes.fr/people/guillaumin/code/MildML_0.1.tar.gz
+2. Run. 
