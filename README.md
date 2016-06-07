@@ -4,7 +4,9 @@ Xiang Xiang (eglxiang@gmail.com), May 2016, MIT license.
 
 =========================
 Pre-processing.
+
 Input:  YFW dataset - videos of hoslitic scenes containing faces.
+
 Output: sampled dataset - selected frames of faces.
 
 1. Face detection and cropping: cropFace.py and process.py.
