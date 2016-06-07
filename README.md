@@ -23,7 +23,9 @@ ii) Selection. Selecting samples using distances from each point to every centro
 
 =========================
 Deep Feature Extration.
+
 Input: Selected faces.
+
 Output: feature representations.
 
 1. Deep face descriptor.
