@@ -29,7 +29,7 @@ Input: Selected faces.
 Output: feature representations.
 
 1. Deep face descriptor.
-Grab codes from another repository of me - https://github.com/eglxiang/vgg_face.git and then use the main_seq.cpp which process all images in the directory specified in the argument. But before using it to compute VGG_Face features for each image, please first create the saving directory yourself. The program will write the feature vector of each face image into a txt file.
+Grab codes from another repository of me - https://github.com/eglxiang/vgg_face.git and then use the main_seq.cpp which process all images in the directory specified in the argument. But before using it to compute VGG_Face features for each image, please first create the saving directory yourself. The program will write the feature vector of each face image into a txt file. A pre-complied binary in release mode is also provided (classify_test).
 
 2. Bash processing for YFW.
 (1) Read selected images for each sequence over all people in the YFW dataset. 
