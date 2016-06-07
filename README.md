@@ -1,4 +1,4 @@
-Experiments on Youtube Face in the Wild (YFW).
+Experiments on Youtube Face in the Wild (YFW). Please download the full dataset from http://www.cs.tau.ac.il/~wolf/ytfaces/ and cite the original paper at CVPR'11 if you publish the experiments on that dataset.
 
 Xiang Xiang (eglxiang@gmail.com), May 2016, MIT license.
 
