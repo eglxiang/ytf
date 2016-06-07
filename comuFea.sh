@@ -1,5 +1,6 @@
 # Xiang Xiang (eglxiang@gmail.com), June 6, 2016, MIT license.
 # Bash processing YFW: computing deep features.
+# Call VGG_Face_seq to process a single sequence. You need to explicitly call the binary (either release or debug mode) such as ./bin/Release/classify_test VGG_FACE_deploy.prototxt VGG_FACE.caffemodel $arg3 where arg3 is the argument defined in the bash.
 #!/bin/bash
 
 shopt -s dotglob
