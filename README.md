@@ -1,6 +1,8 @@
 Experiments on Youtube Face in the Wild (YFW). 
 
-The idea of Linear Discriminant Analysis (LDA) is minimizing intra-class variance and maximizing inter-class variance, which is general. The adaptation of this idea to similarity learning is interesting, such as Discriminative Component Analysis (DCA), Local Fisher Discriminant Analysis (LFDA) and Logistic Discriminant-based Metric Learning (LDML). In ICCV 2009, Matthieu Guillaumin, Jakob Verbeek and Cordelia Schmid proposed this LDML approach in the paper titled "Is that you? Metric Learning Approaches for Face Identification" which has been cited by hundreds of papers. IDML was tested on the Labeled Face in the Wild (LFW) dataset at that time. Two year later, another dataset YFW (Youtube Face in the Wild) was built. Video-based face recognition benchmark makes the subsequent proposals even closer to a real-world face recognition solution. There should be a fair amount of interests to see the performance of LDML on YFW. As time goes by, Local Binary Feature (LBP) has been mostly replaced by deep learning features in the current experiments on either LFW or YFW. Following the same replacement of feature representation, this repository provides a tutorial to verify the metric learning approach of LDML on YFW.
+The idea of Linear Discriminant Analysis (LDA) is minimizing intra-class variance and maximizing inter-class variance, which is general. The adaptation of this idea to similarity learning is interesting, such as Discriminative Component Analysis (DCA), Local Fisher Discriminant Analysis (LFDA) and Logistic Discriminant-based Metric Learning (LDML). In ICCV 2009, Matthieu Guillaumin, Jakob Verbeek and Cordelia Schmid proposed this LDML approach in the paper titled "Is that you? Metric Learning Approaches for Face Identification" which has been cited by hundreds of papers. IDML was tested on the Labeled Face in the Wild (LFW) dataset at that time. Two year later, another dataset YFW (Youtube Face in the Wild) was built by using the 5,749 names of subjects included in the LFW dataset to search YouTube for videos of these same individuals. Then, a screening process reduced the original set of videos from the 18, 899 originally downloaded (3,345 individuals) to 3,425 videos of 1,595 subjects.
+
+Video-based face recognition benchmark makes the subsequent proposals even closer to a real-world face recognition solution. There should be a fair amount of interests to see the performance of LDML on YFW. As time goes by, Local Binary Feature (LBP) has been mostly replaced by deep learning features in the current experiments on either LFW or YFW. Following the same replacement of feature representation, this repository provides a tutorial to verify the metric learning approach of LDML on YFW.
 
 Please download the full dataset from http://www.cs.tau.ac.il/~wolf/ytfaces/ and cite the original paper at CVPR'11 if you publish the experiments on that dataset.
 
@@ -44,4 +46,7 @@ Pairwise metric learning.
 
 1. Split training and testing set.
 2. Multiple Instance Logistic Discriminant-based Metric Learning (MildML) is an extension of LDML for handling bag-level supervision, using the Multiple Instance Learning framework. Please download the program of MildML from http://lear.inrialpes.fr/people/guillaumin/code/MildML_0.1.tar.gz
-2. Run. 
+2. 
+function [ L b info ] = ldml_learn( X, Y, k, it, verbose, A0 )
+Input: X is a (m x d) data matrix (m data points with d dimensions) and Y is a (m x 1) class labels (1 out of 1595)
+where m is , d is 2622 (fc8 is chosen and 2622 corresponds to the number of identities in VGG Face's training set).
