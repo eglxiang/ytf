@@ -43,8 +43,11 @@ Grab codes from another repository of me - https://github.com/eglxiang/vgg_face.
 
 =========================
 Pairwise metric learning. 
-
+(1) Splitting YFW by person.
+Each person has at least 1 sequences. The issue is that the training person set non-overlaps with testing person set. As a result, 
 1. Split training and testing set.
+
+
 2. Multiple Instance Logistic Discriminant-based Metric Learning (MildML) is an extension of LDML for handling bag-level supervision, using the Multiple Instance Learning framework. Please download the program of MildML from http://lear.inrialpes.fr/people/guillaumin/code/MildML_0.1.tar.gz
 2. 
 function [ L b info ] = ldml_learn( X, Y, k, it, verbose, A0 )
