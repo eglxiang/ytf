@@ -33,7 +33,7 @@ Each person has at least 1 sequences. The issue is that the training person set 
 Say, 502 for training and 501 for testing. The person with only 1 sequences (592 people) will only be used as testing data which will be used to verify the generalisation of the learned metric or simply as a non-of-them class.
 
 =========================
-Deep Feature Extration.
+Deep Feature Extraction.
 
 Input: Selected faces.
 
