@@ -30,7 +30,7 @@ ii) Selection. Selecting samples using distances from each point to every centro
 (1) Splitting YFW by person.
 Each person has at least 1 sequences. The issue is that the training person set non-overlaps with testing person set. As a result, we need an unsupervised metric learning algorithm, which means learning a metric from the testing data themselves. However, the way we learn the metric can be trained from the training data.
 (2) Only spliting those with at least 2 sequences (1,003 people). 
-Say, 502 for training and 501 for testing. The person with only 1 sequences (592 people) will only be used as testing data which will be used to verify the generalisation of the learned metric or simply as a non-of-them class.
+Say, 502 for training and 501 for testing. The person with only 1 sequence (592 people) will only be used as testing data which will be used to verify the generalisation of the learned metric or simply as a non-of-them class.
 
 =========================
 Deep Feature Extraction.
