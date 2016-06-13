@@ -6,7 +6,7 @@ Video-based face recognition benchmark makes the subsequent proposals even close
 
 Please download the full dataset from http://www.cs.tau.ac.il/~wolf/ytfaces/ and cite the original paper at CVPR'11 if you publish the experiments on that dataset.
 
-Xiang Xiang (eglxiang@gmail.com), May 2016, MIT license.
+Xiang Xiang (eglxiang@gmail.com), January 2016, MIT license.
 
 =========================
 Pre-processing.
@@ -26,6 +26,12 @@ In particular, the 'headpose_DB' of YFW already contain the poses for each frame
 (2) Performs a frame-wise vector quantization which reduces the number of images required to represent the face from tens or hundreds to K (say, K = 9 for a K-means codebook), while preserving the overall diversity.
 i) Clustering. Due tothe randomness of K-means, you won't get exactly the same result every run.
 ii) Selection. Selecting samples using distances from each point to every centroid. Outputing indexes to index.txt and copying images using selectImg.py.
+
+3.  Split training and testing set.
+(1) Splitting YFW by person.
+Each person has at least 1 sequences. The issue is that the training person set non-overlaps with testing person set. As a result, we need an unsupervised metric learning algorithm, which mean learning a metric from the testing data themselves. However, the way we learn the metric can be trained from the training data.
+(2) Only spliting those with at least 2 sequences (1,003 people). 
+Say, 502 for training and 501 for testing. The person with only 1 sequences (592 people) will only be used as testing data which will be used to verify the generalisation of the learned metric or simply as a non-of-them class.
 
 =========================
 Deep Feature Extration.
@@ -50,9 +56,9 @@ Each person has at least 1 sequences. The issue is that the training person set 
 (2) Only spliting those with at least 2 sequences (1,003 people). 
 Say, 502 for training and 501 for testing. The person with only 1 sequences (592 people) will only be used as testing data which will be used to verify the generalisation of the learned metric or simply as a non-of-them class.
 
-
 2. Multiple Instance Logistic Discriminant-based Metric Learning (MildML) is an extension of LDML for handling bag-level supervision, using the Multiple Instance Learning framework. Please download the program of MildML from http://lear.inrialpes.fr/people/guillaumin/code/MildML_0.1.tar.gz
-2. 
+
+3. 
 function [ L b info ] = ldml_learn( X, Y, k, it, verbose, A0 )
 Input: X is a (m x d) data matrix (m data points with d dimensions) and Y is a (m x 1) class labels (1 out of 1595)
 where m is , d is 2622 (fc8 is chosen and 2622 corresponds to the number of identities in VGG Face's training set).
