@@ -28,7 +28,7 @@ ii) Selection. Selecting samples using distances from each point to every centro
 
 3.  Split training and testing set.
 (1) Splitting YFW by person.
-Each person has at least 1 sequences. The issue is that the training person set non-overlaps with testing person set. As a result, we need an unsupervised metric learning algorithm, which mean learning a metric from the testing data themselves. However, the way we learn the metric can be trained from the training data.
+Each person has at least 1 sequences. The issue is that the training person set non-overlaps with testing person set. As a result, we need an unsupervised metric learning algorithm, which means learning a metric from the testing data themselves. However, the way we learn the metric can be trained from the training data.
 (2) Only spliting those with at least 2 sequences (1,003 people). 
 Say, 502 for training and 501 for testing. The person with only 1 sequences (592 people) will only be used as testing data which will be used to verify the generalisation of the learned metric or simply as a non-of-them class.
 
@@ -49,15 +49,8 @@ Grab codes from another repository of me - https://github.com/eglxiang/vgg_face.
 =========================
 Pairwise metric learning. 
 
-1. Split training and testing set.
-(1) Splitting YFW by person.
-Each person has at least 1 sequences. The issue is that the training person set non-overlaps with testing person set. As a result, we need an unsupervised metric learning algorithm, which mean learning a metric from the testing data themselves. However, the way we learn the metric can be trained from the training data.
-(2) Only spliting those with at least 2 sequences (1,003 people). 
-Say, 502 for training and 501 for testing. The person with only 1 sequences (592 people) will only be used as testing data which will be used to verify the generalisation of the learned metric or simply as a non-of-them class.
+Multiple Instance Logistic Discriminant-based Metric Learning (MildML) is an extension of LDML for handling bag-level supervision, using the Multiple Instance Learning framework. Please download the program of MildML from http://lear.inrialpes.fr/people/guillaumin/code/MildML_0.1.tar.gz
 
-2. Multiple Instance Logistic Discriminant-based Metric Learning (MildML) is an extension of LDML for handling bag-level supervision, using the Multiple Instance Learning framework. Please download the program of MildML from http://lear.inrialpes.fr/people/guillaumin/code/MildML_0.1.tar.gz
-
-3. 
 function [ L b info ] = ldml_learn( X, Y, k, it, verbose, A0 )
 Input: X is a (m x d) data matrix (m data points with d dimensions) and Y is a (m x 1) class labels (1 out of 1595)
 where m is , d is 2622 (fc8 is chosen and 2622 corresponds to the number of identities in VGG Face's training set).
