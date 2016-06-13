@@ -19,7 +19,7 @@ Output: sampled dataset - selected frames of faces.
 The faces in the 'aligned_images_DB' folder of YFW are in the hoslitic scene. However, they have already been centered according to a certain aspect ratio. As a result, the cropping is straightforward.
 
 
-2. Key face selection by pose quantization: sampleSelect.m and selectImg.py
+2. Key face selection by pose quantization: sampleSelect.m and selectImg.py.
 Training face selection by k-means clustering the poses which are rotation angles of roll, pitch and yaw, respectively. 
 (1) Computing the rotation angles for each face video using existing 3D pose estimation method in OpenCV.
 In particular, the 'headpose_DB' of YFW already contain the poses for each frame.
