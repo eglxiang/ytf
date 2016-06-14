@@ -27,15 +27,25 @@ i) Clustering. Due to the randomness of K-means, you won't get exactly the same 
 ii) Selection. Selecting samples using distances from each point to every centroid. Outputing indexes to index.txt and copying images using selectImg.py.
 
 3.  Split training and testing set.
-
 There are 1,595 names in YFW.
 
-(1) Splitting YFW by person.
-Say, 798 for training and 797 for testing. Each person has at least 1 sequences. The issue is that the training person set non-overlaps with testing person set. As a result, we need an unsupervised metric learning algorithm, which means learning a metric from the testing data themselves. However, the way we learn the metric can be trained from the training data.
+(1) Unrestricted protocol: providing labels of subject identity.
 
-(2) Splitting each person's imagery by sequence. 
+i) Splitting YFW by person.
+798 for training and 797 for testing. Each person has at least 1 sequences. The issue is that the training person set non-overlaps with testing person set. As a result, we need an unsupervised metric learning algorithm, which means learning a metric from the testing data themselves. However, the way we learn the metric can be trained from the training data.
+ii) Splitting each person's imagery by sequence. 
 Only spliting those with at least 2 sequences (1,003 people). Taking 1 sequence of each person for training; the rest for testing.
 The person with only 1 sequence (592 people) will only be used as testing data which will be used to verify the generalisation of the learned metric or simply as a non-of-them class.
+
+(2) Restricted protocol: providing labels of 'same' or 'not-same'.
+
+The goal of this protocol is to determine, for each split, which are the same and which are the non-same pairs, by training on the pairs from the nine remaining splits.
+Randomly collecting 5,000 video pairs as listed in http://www.cs.tau.ac.il/~wolf/ytfaces/splits.txt
+half of which are pairs of videos of the same person and half of different people.
+These pairs were divided into 10 splits.
+1~500 is the 1st split: 1~250 is 'same' while 251~500 is 'not-same'.
+501-1000 is the 2nd split: 501~750 is 'same' while 751~1000 is 'not-same'.
+and so on. 
 
 =========================
 Deep Feature Extraction.
