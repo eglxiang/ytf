@@ -63,6 +63,8 @@ Grab codes from another repository of me - https://github.com/eglxiang/vgg_face.
 
 =========================
 Pairwise metric learning. 
+During the process of metric training, what do we want to lear the latent basis that CNN features will be project on.
+And we hope that once applying the projection to testing sample, it is more discriminative.
 
 Multiple Instance Logistic Discriminant-based Metric Learning (MildML) is an extension of LDML for handling bag-level supervision, using the Multiple Instance Learning framework. Please download the program of MildML from http://lear.inrialpes.fr/people/guillaumin/code/MildML_0.1.tar.gz
 
