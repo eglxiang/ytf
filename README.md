@@ -29,6 +29,7 @@ ii) Selection. Selecting samples using distances from each point to every centro
 3.  Split training and testing set.
 
 There are 1,595 names in YFW.
+
 (1) Splitting YFW by person.
 Say, 798 for training and 797 for testing. Each person has at least 1 sequences. The issue is that the training person set non-overlaps with testing person set. As a result, we need an unsupervised metric learning algorithm, which means learning a metric from the testing data themselves. However, the way we learn the metric can be trained from the training data.
 
