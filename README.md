@@ -4,7 +4,7 @@ The idea of Linear Discriminant Analysis (LDA) is minimizing intra-class varianc
 
 Video-based face recognition benchmark makes the subsequent solutions closer to a real-world face recognition solution. There should be a fair amount of interests to see the performance of LDML on YFW. As time goes by, Local Binary Feature (LBP) has been mostly replaced by deep learning features in the current experiments on either LFW or YFW. Following the same replacement of feature representation, this repository provides a tutorial to verify the metric learning approach of LDML on YFW.
 
-Please download the full dataset from http://www.cs.tau.ac.il/~wolf/ytfaces/ and cite the original paper at CVPR'11 if you publish the experiments on that dataset.
+Please download the full dataset from http://www.cs.tau.ac.il/~wolf/ytfaces/ and cite the original paper at CVPR'11 if you publish the experiments on that dataset. We remove the 2nd sequence of 'Lionel_Richel' due to really low image quality possibly due to compression artifacts.
 
 Xiang Xiang (eglxiang@gmail.com), January 2016, MIT license.
 
