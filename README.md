@@ -32,7 +32,7 @@ There are 1,595 names in YTF.
 (1) Unrestricted protocol: providing labels of subject identity.
 
 i) Splitting YTF by person.
-798 for training and 797 for testing. Each person has at least 1 sequences. The issue is that the training person set non-overlaps with testing person set. As a result, we learn a projection matrix from the training data and use it to project testing data into a hopefully more discriminative feature space.
+We make sure that the training person set non-overlaps with testing person set. As a result, there are 798 people for training and 797 for testing where each person has at least 1 sequence. Then, we learn a projection matrix from the training data and use it to project testing data into a hopefully more discriminative feature space.
 ii) Splitting each person's imagery by sequence. 
 Only spliting those with at least 2 sequences (1,003 people). Taking 1 sequence of each person for training; the rest for testing.
 The person with only 1 sequence (592 people) will only be used as testing data which will be used to verify the generalisation of the learned metric or simply as a non-of-them class.
