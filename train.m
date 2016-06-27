@@ -61,6 +61,10 @@ end
 % learning a projection
 cd(initial_directory);
 [ L b info ] = ldml_learn(A,y);
+% save the projection matrix to txt
+fileID = fopen('ProjectTo650Mat.txt','w');
+fprintf(fileID, [repmat('%f\t',1,size(L,2)) '\n'], L');
+fclose(fileID);
 
 % Testing: whether two sequence represent the same person
 % process the first test seq
