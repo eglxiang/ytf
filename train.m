@@ -66,31 +66,57 @@ fileID = fopen('ProjectTo650Mat.txt','w');
 fprintf(fileID, [repmat('%f\t',1,size(L,2)) '\n'], L');
 fclose(fileID);
 
-% Testing: whether two sequence represent the same person
+%% Testing: whether two sequence represent the same person
 % process the first test seq
+personname1 = exterior_folders( test_index_set(1)+2 ).name;
+cd(video_directory);
 cd(personname1); % you set personname1
-cd(seqid1);
-namelist=dir();
-A=[];
-for i=3:(N+2)
-    inputfilename = namelist(i).name;
-    fileID = fopen(inputfilename, 'r');
-    a = fscanf(fileID, '%f');
-    fclose(fileID);
-    A = [A a];
-end
+interior_folders=dir;
 
-% process the second test seq 
-cd(personname1); % you set this
-cd(seqid2);
-namelist=dir();
-B=[];
-for i=3:(N+2)
-    inputfilename = namelist(i).name;
-    fileID = fopen(inputfilename, 'r');        
-    b = fscanf(fileID, '%f');
-    fclose(fileID);
-    B = [B b];
+if num_interior_folders > 3
+    seqid1 = interior_folders(3).name;
+    cd(seqid1);
+    namelist=dir();
+    [num_files,~]=size(namelist);
+    if num_files == 11
+        B1 = [];
+        for i=3:num_files
+            inputfilename = namelist(i).name;
+            fileID = fopen(inputfilename, 'r');
+            b = fscanf(fileID, '%f');
+            fclose(fileID);
+            B1 = [B1; b'];
+        end
+    end
+    
+    cd ..
+    % process the second test seq with the same subject
+    seqid2 = interior_folders(4).name;
+    cd(seqid2);
+    namelist=dir();
+    [num_files,~]=size(namelist);
+    if num_files == 11
+        B2 = [];
+        for i=3:num_files
+            inputfilename = namelist(i).name;
+            fileID = fopen(inputfilename, 'r');
+            b = fscanf(fileID, '%f');
+            fclose(fileID);
+            B2 = [B2; b'];
+        end
+    end
+    
+    %B1 = B1*L; %projection
+    %B1 = normr(B1); % normalize rows
+    %B2 = B2*L;
+    %B2 = normr(B2);
+    
+    % correlation
+    corr = B1*B2';
+    corr_max = max(corr(:));
+    if corr_max > 0.85
+        disp('Same person.');
+    else
+        disp('Different person.');
+    end
 end
-
-% project the test feature
