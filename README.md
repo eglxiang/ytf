@@ -55,7 +55,7 @@ Input: Selected faces.
 Output: feature representations.
 
 1. Deep face descriptor.
-Grab codes from another repository of me - https://github.com/eglxiang/vgg_face.git and then use the main_seq.cpp which process all images in the directory specified in the argument. But before using it to compute VGG_Face features for each image, please first create the saving directory yourself. The program will write the feature vector of each face image into a txt file. A pre-complied binary in release mode is also provided (classify_test).
+Grab codes from another repository of me - https://github.com/eglxiang/vgg_face.git and then use the main_seq.cpp which process all images in the directory specified in the argument. VGG pre-trained model and the Caffe protocol file can be downloaded from http://www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_caffe.tar.gz Features are FC7 so they are 4096-dim. Note that our program will write the feature vector of each face image into a txt file. A pre-complied binary in release mode is also provided (classify_test).
 
 2. Bash processing for YTF.
 (1) Read selected images for each sequence over all people in the YTF dataset.
