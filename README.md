@@ -71,3 +71,6 @@ Multiple Instance Logistic Discriminant-based Metric Learning (MildML) is an ext
 function [ L b info ] = ldml_learn( X, Y, k, it, verbose, A0 )
 Input: X is a (m x d) data matrix (m data points with d dimensions) and Y is a (m x 1) class labels (1 out of 1595)
 where m is , d is 2622 (fc8 is chosen and 2622 corresponds to the number of identities in VGG Face's training set).
+
+================
+Note that if you want to save to a directory with another name, you should change it in compuFea2.sh as well as the main.cpp. SImilarly if you want to input images in another directory other than 'selected_faces'.
