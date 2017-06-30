@@ -83,6 +83,6 @@ Please cite the following paper.
 @inproceedings{xiang16pose, 
   author = {Xiang, Xiang and Tran, Trac D},<br>
   Title = {Pose-Selective Max Pooling for Measuring Similarity},<br>
-  booktitle = {VAAM/FFER@ICPR 2016},<br>
+  booktitle = {VAAM/FFER@ICPR 2016}, <br>
   Year  = {2016}<br>
 }
