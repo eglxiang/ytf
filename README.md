@@ -76,3 +76,13 @@ where m is , d is 2622 (fc8 is chosen and 2622 corresponds to the number of iden
 
 ================
 Note that if you want to save to a directory with another name, you should change it in compuFea2.sh as well as the main.cpp. SImilarly if you want to input images in another directory other than 'selected_faces'.
+
+I am more than happy to know if this program is of use to your work.
+Please cite the following paper.
+
+@inproceedings{xiang16pose, 
+  author = {Xiang, Xiang and Tran, Trac D},<br>
+  Title = {Pose-Selective Max Pooling for Measuring Similarity},<br>
+  booktitle = {VAAM/FFER@ICPR 2016},<br>
+  Year  = {2016}<br>
+}
