@@ -80,7 +80,7 @@ Note that if you want to save to a directory with another name, you should chang
 I am more than happy to know if this program is of use to your work.
 Please cite the following paper.
 
-@inproceedings{xiang16pose, 
+@inproceedings{xiang16pose, <br>
   author = {Xiang, Xiang and Tran, Trac D},<br>
   Title = {Pose-Selective Max Pooling for Measuring Similarity},<br>
   booktitle = {VAAM/FFER@ICPR 2016}, <br>
