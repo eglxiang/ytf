@@ -86,3 +86,5 @@ Please cite the following paper.
   booktitle = {VAAM/FFER@ICPR 2016}, <br>
   Year  = {2016}<br>
 }
+
+See related issues here: https://github.com/number9473/nn-algorithm/issues/135
